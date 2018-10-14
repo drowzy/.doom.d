@@ -10,4 +10,6 @@
 
  doom-font (font-spec :family "Sauce Code Powerline" :size 14)
  doom-big-font (font-spec :family "Sauce Code Powerline" :size 16)
+
+ evil-escape-key-sequence "fd"
  )
