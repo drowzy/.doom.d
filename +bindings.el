@@ -12,6 +12,13 @@
      :n "_" #'evil-window-split
      :n "d" #'+workspace/close-window-or-workspace)
 
+   (:desc "kubernetes" :prefix "k"
+     :desc "Cluster status" :n "k" #'kubernetes-overview
+     :desc "Pod view" :n "p" #'kubernetes-display-pod
+     :desc "Service view" :n "s" #'kubernetes-display-service
+     :desc "Job view" :n "j" #'kubernetes-display-job
+     :desc "Configmap view" :n "c" #'kubernetes-display-job
+     :desc "Secret view" :n "x" #'kubernetes-display-secret)
    (:desc "buffer" :prefix "b"
      :desc "List buffers" :n "b" #'ivy-switch-buffer
      :desc "Close buffer" :n "d" #'kill-this-buffer)
