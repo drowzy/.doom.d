@@ -15,6 +15,9 @@
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
+       (lsp
+        +javascript
+        +sh)
        (company          ; the ultimate code completion backend
         +childframe
         +auto)           ; as-you-type code completion
