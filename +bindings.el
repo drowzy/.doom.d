@@ -9,6 +9,9 @@
        :desc "Abort commit" :n "a" #'with-editor-cancel
        )))
 
+  (:after restclient
+    (:map restclient-mode-map :localleader :n "s" #'restclient-http-send-current))
+
  (:leader
    :desc "Ex command" :nv "!"  #'evil-ex
    :desc "Terminal in popup" :n "'" #'+term/open-popup-in-project
