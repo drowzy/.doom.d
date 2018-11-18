@@ -7,3 +7,4 @@
 ;; (package! builtin-package :disable t)
 (package! kubernetes)
 (package! kubernetes-evil)
+(package! linum-relative)

@@ -18,3 +18,8 @@
 
 (doom-themes-neotree-config)
 (setq doom-neotree-file-icons t)
+
+(def-package! linum-relative
+  :config
+  (setq linum-relative-backend 'display-line-numbers-mode)
+  (linum-relative-global-mode))
