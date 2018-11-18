@@ -14,11 +14,13 @@
    :desc "Terminal in popup" :n "'" #'+term/open-popup-in-project
    :desc "Toggle buffer" :n "`" #'+drowzy/switch-to-previous-buffer
    :desc "[un]comment" :nv  ";"  #'evil-commentary-line
+   :desc "text-scale" :n "=" #'doom-text-zoom-hydra/body
 
    (:desc "window" :prefix "w"
      :n "/" #'evil-window-vsplit
      :n "_" #'evil-window-split
-     :n "d" #'+workspace/close-window-or-workspace)
+     :n "d" #'+workspace/close-window-or-workspace
+     :n "." #'doom-window-nav-hydra/body)
 
    (:desc "kubernetes" :prefix "k"
      :desc "Cluster status" :n "k" #'kubernetes-overview
