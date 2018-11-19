@@ -2,6 +2,11 @@
 
 (map!
 
+ :n "C-h"   #'evil-window-left
+ :n "C-j"   #'evil-window-down
+ :n "C-k"   #'evil-window-up
+ :n "C-l"   #'evil-window-right
+
  (:after magit
    (:map with-editor-mode-map
      (:prefix ","
@@ -14,7 +19,8 @@
 
  (:leader
    :desc "Ex command" :nv "!"  #'evil-ex
-   :desc "Terminal in popup" :n "'" #'+term/open-popup-in-project
+   ;; :desc "Terminal in popup" :n "'" #'+term/open-popup-in-project
+   :desc "Terminal in popup" :n "'" #'+eshell/open-popup
    :desc "Toggle buffer" :n "`" #'+drowzy/switch-to-previous-buffer
    :desc "[un]comment" :nv  ";"  #'evil-commentary-line
    :desc "text-scale" :n "=" #'doom-text-zoom-hydra/body

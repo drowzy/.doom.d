@@ -1,0 +1,8 @@
+alias k kubectl $*
+alias f find-file $1
+alias l ls -lh
+alias d  dired $1
+alias gl (call-interactively 'magit-log-current)
+alias gs magit-status
+alias gc magit-commit
+alias rg rg --color=always $*
