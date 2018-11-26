@@ -19,6 +19,7 @@
 
  (:leader
    :desc "Ex command" :nv "!"  #'evil-ex
+   :desc "Select window" :n "SPC"  #'ace-window
    ;; :desc "Terminal in popup" :n "'" #'+term/open-popup-in-project
    :desc "Terminal in popup" :n "'" #'+eshell/open-popup
    :desc "Toggle buffer" :n "`" #'+drowzy/switch-to-previous-buffer
@@ -54,3 +55,7 @@
        :desc "Project sidebar"              :n  "t" #'+neotree/open)
      (:when (featurep! :ui treemacs)
        :desc "Project sidebar"              :n  "t" #'+treemacs/toggle))))
+
+(after! neotree
+  (map! :map neotree-mode-map
+        :n "?" #'doom-neotree-helpful-hydra/body))

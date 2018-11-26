@@ -45,3 +45,39 @@
   ("L" hydra-move-splitter-right)
 
   ("q" nil))
+
+
+;;;###autoload (autoload 'doom-neotree-helpful-hydra/body "autoload/+hydras" nil nil)
+(defhydra doom-neotree-helpful-hydra (:hint t :color red)
+  "
+Navigation^^^^             Actions^^         Visual actions/config^^^
+───────^^^^─────────────── ───────^^──────── ───────^^^────────────────
+[_L_]   next sibling^^     [_c_] create      [_TAB_] shrink/enlarge
+[_H_]   previous sibling^^ [_C_] copy        [_|_]   vertical split
+[_J_]   goto child^^       [_d_] delete      [_-_]   horizontal split
+[_K_]   goto parent^^      [_r_] rename      [_gr_]  refresh^
+[_l_]   open/expand^^      [_R_] change root ^^^
+[_j_]   line down^^        ^^                ^^^
+[_k_]   line up^^          ^^                ^^
+[_'_]   quick look         ^^                ^^
+^^^                        ^^^^              [_?_]   close hints
+"
+  ("RET" nil)
+  ("TAB" neotree-stretch-toggle)
+  ("|" neotree-enter-vertical-split)
+  ("-" neotree-enter-horizontal-split)
+  ("'" neotree-quick-look)
+  ("c" neotree-create-node)
+  ("C" neotree-copy-node)
+  ("d" neotree-delete-node)
+  ("gr" neotree-refresh)
+  ("H" neotree-select-previous-sibling-node)
+  ("j" neotree-next-line)
+  ("J" neotree-select-down-node)
+  ("k" neotree-previous-line)
+  ("K" neotree-select-up-node)
+  ("l" nil)
+  ("L" neotree-select-next-sibling-node)
+  ("r" neotree-rename-node)
+  ("R" neotree-change-root)
+  ("?" nil))
