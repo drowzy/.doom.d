@@ -13,3 +13,4 @@
 (package! linum-relative)
 ;; lang
 (package! reason-mode)
+(package! keyfreq :recipe (:fetcher github :repo "dacap/keyfreq" :files ("keyfreq.el")))

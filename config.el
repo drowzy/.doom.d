@@ -25,3 +25,4 @@
   (linum-relative-global-mode))
 
 (load! "+reason")
+(load! "+keyfreq")
