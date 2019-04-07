@@ -14,3 +14,6 @@
 ;; lang
 (package! reason-mode)
 (package! keyfreq :recipe (:fetcher github :repo "dacap/keyfreq" :files ("keyfreq.el")))
+(package! alchemist-company :disable t)
+(package! alchemist :disable t)
+(package! dap-mode)

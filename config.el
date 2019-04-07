@@ -25,4 +25,6 @@
   (linum-relative-global-mode))
 
 (load! "+reason")
+(load! "+elixir-ls")
+(load! "+dap")
 (load! "+keyfreq")
