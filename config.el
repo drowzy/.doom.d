@@ -17,6 +17,8 @@
 
 
 (doom-themes-neotree-config)
+(doom-themes-org-config)
+
 (setq doom-neotree-file-icons t)
 
 (def-package! linum-relative
@@ -26,5 +28,6 @@
 
 (load! "+reason")
 (load! "+elixir-ls")
-(load! "+dap")
+;; (load! "+dap")
 (load! "+keyfreq")
+(load! "+fsharp")

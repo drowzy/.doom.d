@@ -17,3 +17,4 @@
 (package! alchemist-company :disable t)
 (package! alchemist :disable t)
 (package! dap-mode)
+(package! fsharp-mode)
