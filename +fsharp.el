@@ -2,9 +2,10 @@
 
 (after! fsharp-mode
   (setq fsharp-ac-use-popup nil) ; Use a buffer for docs rather than a pop-up
+  (setq fsharp-ac-intellisense-enabled nil)
   (set-lookup-handlers! 'fsharp-mode :async t :definition #'fsharp-ac/gotodefn-at-point)
   (set-repl-handler! 'fsharp-mode #'fsharp-show-subshell)
-  (setq-default fsharp-indent-offset 2)
+  (setq-default fsharp-indent-offset 4)
   (map! :localleader
         :map fsharp-mode-map
         "b" #'fsharp-ac/pop-gotodefn-stack ; Useful for re-tracing your steps
